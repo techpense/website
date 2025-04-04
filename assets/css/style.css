@@ -116,8 +116,8 @@ header .head-ro {
   padding: 3px;
 }
 header .head-ro .logo img {
-  max-width: 100px;
-  padding-top: 2px;
+  max-width: 80px;
+  padding-top: 1px;
 }
 header .head-ro .show {
   display: block !important;
@@ -141,7 +141,7 @@ header .head-ro .nav ul li {
 }
 header .head-ro .nav ul li a {
   font-weight: 600;
-  color: #444;
+  color: #ffffff;
   font-size: 0.9rem;
 }
 @media only screen and (max-width: 767px) {
@@ -169,7 +169,9 @@ header .head-ro .nav ul .btnll .btn {
 
 .head-cover {
   margin-top: 2px;
-  background-color: #f3f4f8;
+  /*background-color: #f3f4f8;*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../images/main-bg.jpg'); /* Replace with your image path */
+
 }
 
 .small-menu {
@@ -186,6 +188,17 @@ header .head-ro .nav ul .btnll .btn {
   background-color: #f3f4f8;
   padding-bottom: 100px;
 }
+/* New class to apply background image to the banner section */
+.banner-with-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../images/cloud-office.jpg'); /* Replace with your image path */
+  background-size: cover; /* Adjust as needed: contain, auto, etc. */
+  background-position: center; /* Adjust as needed: top, bottom, left, right */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  padding-top: 150px; /* Add padding to make space for the background image */
+  padding-bottom: 150px; /* Keep the original bottom padding */
+  color: #fff; /* Adjust text color if needed for better visibility on the background */
+}
+
 .banner-container .banner-row .banner-txt {
   margin: auto;
 }
@@ -209,7 +222,7 @@ header .head-ro .nav ul .btnll .btn {
 @media only screen and (max-width: 767px) {
   .banner-container .banner-row .btn-row .btn {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 20px;=
   }
 }
 .banner-container .banner-img {
@@ -234,7 +247,7 @@ header .head-ro .nav ul .btnll .btn {
 }
 .key-featurecont .key-ro .keycol .key-cover {
   box-shadow: 4.871px 34.659px 30px 0px rgba(0, 0, 0, 0.06);
-  background-color: #FFF;
+  background-color: #ffffff;
   display: flex;
   padding: 15px;
   border-radius: 8px;
@@ -793,4 +806,692 @@ footer .tags ul li {
   margin-bottom: 20px;
 }
 
+
+/*Start of Additional Custom CSS Added by Sethil*/
+/* button at home page banner */
+.btn-new {
+  font-size: x-large;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd
+}
+
+.btn-new:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca
+}
+
+.btn-check:focus+.btn-new,
+.btn-new:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5)
+}
+
+.btn-check:active+.btn-new,
+.btn-check:checked+.btn-new,
+.btn-new.active,
+.btn-new:active,
+.show>.btn-new.dropdown-toggle {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be
+}
+
+/* Banner 2 at home page*/
+.banner-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9; /* Light background */
+  padding: 150px 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Clip the zooming image */
+  animation: riseIn 5s ease-out forwards; /* Apply the rise-in animation */
+
+}
+
+.banner-image-container {
+  flex: 0 0 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  transform-origin: center; /* Set the origin for the zoom */
+  /*animation: zoomOut 5s infinite alternate; /* Apply the zoom animation */
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block; /* Prevent extra space below image */
+  transform: scale(1.1); /* Initial slight zoom for the out effect */
+}
+
+.banner-content {
+  flex: 0 0 45%;
+  text-align: left;
+}
+
+.banner-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.banner-subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.banner-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff; /* Example primary color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes zoomOut {
+  0% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+  }
+
+  .banner-image-container {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .banner-content {
+      width: 80%;
+      text-align: center;
+  }
+
+  .banner-title {
+      font-size: 2em;
+  }
+
+  .banner-button {
+      width: 100%;
+  }
+}
+
+/* Section/Container riseon while scroll*/
+.rise-on-scroll {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start slightly below */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+.rise-on-scroll.active {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to its normal position */
+}
+
+/* Example styling for the section/container itself */
+.your-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px; /* Add some space between sections */
+}
+  
+/*who we are section*/
+.who-we-are-section {
+  background: linear-gradient(135deg, #0a1128, #001f54); /* Dark gradient background */
+  color: #fff;
+  padding: 80px 40px;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 40px;
+  /*opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;*/
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-us-text {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s; /* Delay for staggered effect */
+}
+
+.about-us-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vision-mission-container {
+  display: flex;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s; /* Further delay */
+}
+
+.vision-mission-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vision, .mission {
+  flex: 1;
+}
+
+.vision-title, .mission-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.vision-content, .mission-content {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* JavaScript for scroll animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*solution*/
+.solutions-section {
+  padding: 80px 40px;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-bg.jpg'); /* Replace with your image path */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.solution-card {
+  /*background-color: #1e273a; /* Dark card background */
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.solution-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 180px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* JavaScript for scroll animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Section types*/
+.types-section {
+  padding: 80px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make it full viewport height for demonstration */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-bg.jpg'); /* Replace with your image path */
+}
+
+.types-container {
+  max-width: 1200px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.image-container {
+  flex: 0 0 45%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.image-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-container {
+  flex: 0 0 50%;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  opacity: 0;
+  color: #ffffff;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.types-item {
+  margin-bottom: 25px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.types-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.types-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #007bff; /* Example accent color */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 15px;
+}
+
+.types-title-text {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  color: #ffffff;
+}
+
+.types-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* JavaScript for scroll animation */
+.rise-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rise-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* cloud-solution section */
+.cloud-solutions-section {
+  padding: 150px 100px;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solutions-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.borderline-green{
+  border:solid #05fc95 2px;
+}
+
+.borderline-teal{
+  border:solid #03f7ff 2px;
+}
+
+
+.borderline-blue{
+  border:solid #007bfc 2px;
+}
+
+
+.solution-box {
+  background-color: #1e293b; /* Darker card background */
+  border-radius: 10px;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.solution-box.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Target the AI and Machine Learning box to span two columns */
+.solution-box:last-child {
+  grid-column: 1 / span 2;
+}
+
+.solution-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.solution-description {
+  font-size: 1em;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.image-container {
+  float: right; /* Float image to the right */
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(50px); /* Slide in from right */
+  transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.image-container.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Reusing rising up animation styles */
+.rise-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rise-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* New styles for two-column layout */
+.cloud-solutions-section {
+  display: flex; /* Enable flexbox for the section */
+  align-items: center; /* Vertically align content */
+  justify-content: space-between; /* Space out text and image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-bg.jpg'); /* Replace with your image path */
+
+}
+
+.text-content {
+  flex: 1; /* Allow text content to take up available space */
+  margin-right: 30px; /* Add some spacing between text and image */
+}
+
+.image-side {
+  flex: 1; /* Allow image side to take up available space */
+  text-align: right; /* Align image to the right */
+}
+
+/* Adjustments for solutions-overview within the text column */
+.text-content .solutions-overview {
+  margin-bottom: 0; /* Remove extra bottom margin */
+}
+
+/*power-platform-section*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rise-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rise-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* New styles for Power Platform section */
+.power-platform-section {
+  padding: 150px 80px;
+  background-color: #1e293b; /* Darker section background */
+}
+
+.capabilities-grid {
+  display: flex; /* Change to flexbox for inline layout */
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.capability-box {
+  flex: 1; /* Allow boxes to take equal width if needed */
+  padding: 10px;
+  width: 100px;
+  border-radius: 8px;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.capability-box.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.capability-icon {
+  font-size: 2em; /* Adjust icon size */
+  margin-bottom: 15px;
+  color: #007bff; /* Example accent color */
+}
+
+.capability-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.capability-description {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+  justify-content: left;
+}
+
+.section-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-content {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.right-image {
+  flex: 1;
+  text-align: right;
+}
+
+.right-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+}
+
+.right-image.active img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Placeholder for icons (replace with actual icons or image paths) */
+.icon-power-bi::before { content: "📊"; }
+.icon-power-apps::before { content: "📱"; }
+.icon-power-automate::before { content: "⚡"; }
+
+
+/*End of Additional Custom CSS Added by Sethil*/
 /*# sourceMappingURL=style.css.map */
