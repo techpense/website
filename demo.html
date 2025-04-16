@@ -1,0 +1,114 @@
+<div style="padding:20px" class="col-sm-7">
+    <h2>Contact Form</h2> <br>
+    <form id="contactForm">
+        <div class="row cont-row">
+            <div class="col-sm-3"><label>Enter Name </label><span>:</span></div>
+            <div class="col-sm-8">
+                <input type="text" placeholder="Enter Name" name="name" id="name" class="form-control input-sm">
+                <div class="error-message" id="name-error"></div>
+            </div>
+        </div>
+        <div class="row cont-row">
+            <div class="col-sm-3"><label>Email Address </label><span>:</span></div>
+            <div class="col-sm-8">
+                <input type="email" name="email" id="email" placeholder="Enter Email Address" class="form-control input-sm">
+                <div class="error-message" id="email-error"></div>
+            </div>
+        </div>
+        <div class="row cont-row">
+            <div class="col-sm-3"><label>Mobile Number</label><span>:</span></div>
+            <div class="col-sm-8">
+                <input type="tel" name="phone" id="phone" placeholder="Enter Mobile Number" class="form-control input-sm">
+                <div class="error-message" id="phone-error"></div>
+            </div>
+        </div>
+        <div class="row cont-row">
+            <div class="col-sm-3"><label>Enter Message</label><span>:</span></div>
+            <div class="col-sm-8">
+                <textarea rows="5" placeholder="Enter Your Message" name="message" id="message" class="form-control input-sm"></textarea>
+                <div class="error-message" id="message-error"></div>
+            </div>
+        </div>
+        <div style="margin-top:10px;" class="row">
+            <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+            <div class="col-sm-8">
+                <button type="button" id="submitBtn" class="btn btn-success btn-sm">Send Message</button>
+                <div id="successMessage" style="display:none;color:green;margin-top:10px;">
+                    Form prepared for sending - check your email client
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#submitBtn').click(function() {
+        // Reset errors
+        $('.error-message').hide();
+        $('.form-control').removeClass('error');
+        
+        // Validate
+        let valid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if ($('#name').val().trim() === '') {
+            $('#name-error').text('Name is required').show();
+            $('#name').addClass('error');
+            valid = false;
+        }
+        
+        if ($('#email').val().trim() === '') {
+            $('#email-error').text('Email is required').show();
+            $('#email').addClass('error');
+            valid = false;
+        } else if (!emailRegex.test($('#email').val())) {
+            $('#email-error').text('Invalid email format').show();
+            $('#email').addClass('error');
+            valid = false;
+        }
+        
+        if ($('#message').val().trim() === '') {
+            $('#message-error').text('Message is required').show();
+            $('#message').addClass('error');
+            valid = false;
+        }
+        
+        if (valid) {
+            const name = encodeURIComponent($('#name').val());
+            const email = encodeURIComponent($('#email').val());
+            const phone = encodeURIComponent($('#phone').val());
+            const message = encodeURIComponent($('#message').val());
+            
+            const subject = `Contact Form Submission from ${name}`;
+            const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+            
+            // Open default mail client
+            window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+            
+            // Show success message
+            $('#successMessage').fadeIn();
+            setTimeout(() => $('#successMessage').fadeOut(), 5000);
+        }
+    });
+    
+    // Clear errors on input
+    $('input, textarea').on('input', function() {
+        $(this).removeClass('error');
+        $(`#${this.id}-error`).hide();
+    });
+});
+</script>
+
+<style>
+.error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+.error {
+    border-color: #dc3545 !important;
+}
+</style>
