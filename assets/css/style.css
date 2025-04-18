@@ -164,7 +164,8 @@ header .head-ro .nav ul .btnll .btn {
 
 .scroll-to-fixed-fixed {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  background-color: #FFF;
+  /*background-color: #FFF;*/
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../images/main-bg.jpg'); /* Replace with your image path */
 }
 
 .head-cover {
