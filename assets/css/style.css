@@ -1215,13 +1215,13 @@ footer .tags ul li {
   font-weight: bold;
   margin-bottom: 8px;
   display: block;
-  color: #ffffff;
+  color: #001f54;
 }
 
 .types-description {
   font-size: 1em;
   line-height: 1.6;
-  color: #ddd;
+  color: #001f54;
 }
 
 /* JavaScript for scroll animation */
