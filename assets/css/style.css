@@ -1134,7 +1134,8 @@ footer .tags ul li {
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Make it full viewport height for demonstration */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-bg.jpg'); /* Replace with your image path */
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/main-bg.jpg');*/ /* Replace with your image path */
+  bacground-color:#FFFFFF;
 }
 
 .types-container {
