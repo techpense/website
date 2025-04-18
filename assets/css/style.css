@@ -1185,6 +1185,20 @@ footer .tags ul li {
   transform: translateY(0);
 }
 
+.types-section-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  opacity: 0;
+  color: #001f54;
+}
+
+.types-section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .types-item {
   margin-bottom: 25px;
   opacity: 0;
