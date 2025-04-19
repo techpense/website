@@ -1511,5 +1511,28 @@ footer .tags ul li {
 .icon-power-automate::before { content: "⚡"; }
 
 
+/* Contact button styling to match navigation */
+.contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #000; /* Black text */
+  background-color: #69f0ae; /* Bright green color */
+  border-radius: 50px; /* Pill shape */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #8affc9; /* Slightly lighter green on hover */
+}
+
+.location-text {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ddd;
+}
+
+
 /*End of Additional Custom CSS Added by Sethil*/
 /*# sourceMappingURL=style.css.map */
