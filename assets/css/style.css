@@ -114,8 +114,6 @@ header {
 }
 header .head-ro {
   padding: 3px;
-  align-items: center;
-
 }
 header .head-ro .logo img {
   max-width: 250px;
