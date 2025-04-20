@@ -120,6 +120,7 @@ header .head-ro {
 header .head-ro .logo img {
   max-width: 200px;
   padding-top: 12px;
+  padding-right: 50px;
 }
 header .head-ro .show {
   display: block !important;
