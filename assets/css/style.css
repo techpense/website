@@ -137,6 +137,8 @@ header .head-ro .nav ul {
 header .head-ro .nav ul li {
   float: left;
   padding: 20px;
+  display: inline-flex;
+    align-items: center
 }
 @media only screen and (max-width: 860px) {
   header .head-ro .nav ul li {
