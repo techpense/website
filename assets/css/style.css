@@ -118,8 +118,8 @@ header .head-ro {
     align-items: center
 }
 header .head-ro .logo img {
-  max-width: 250px;
-  padding-top: 1px;
+  max-width: 200px;
+  padding-top: 12px;
 }
 header .head-ro .show {
   display: block !important;
@@ -131,6 +131,8 @@ header .head-ro .show {
 }
 header .head-ro .nav ul {
   width: 100%;
+  display: inline-flex;
+    align-items: center
 }
 header .head-ro .nav ul li {
   float: left;
