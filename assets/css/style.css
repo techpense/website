@@ -138,6 +138,21 @@ header .head-ro .nav ul li {
   display: inline-flex;
     align-items: center
 }
+/* addition by senthil*/
+eader .head-ro .nav ul li .contact-button {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #0a1128; /* Black text */
+  background-color: #69f0ae; /* Bright green color */
+  border-radius: 50px; /* Pill shape */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+header .head-ro .nav ul li .contact-button:hover {
+  background-color: #8affc9; /* Slightly lighter green on hover */
+}
 
 @media only screen and (max-width: 860px) {
   header .head-ro .nav ul li {
