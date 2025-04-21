@@ -139,7 +139,7 @@ header .head-ro .nav ul li {
     align-items: center
 }
 /* addition by senthil*/
-eader .head-ro .nav ul li .contact-button {
+eader .head-ro .nav ul li a .contact-button {
   display: inline-block;
   padding: 15px 30px;
   text-decoration: none;
@@ -150,7 +150,7 @@ eader .head-ro .nav ul li .contact-button {
   transition: background-color 0.3s ease;
 }
 
-header .head-ro .nav ul li .contact-button:hover {
+header .head-ro .nav ul li a .contact-button:hover {
   background-color: #8affc9; /* Slightly lighter green on hover */
 }
 
