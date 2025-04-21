@@ -180,4 +180,22 @@
 <script src="assets/plugins/testimonial/js/owl.carousel.min.js"></script>
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="assets/js/script.js"></script>
+<script>
+    function revealOnScroll() {
+        const elements = document.querySelectorAll(".rise-on-scroll");
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            const revealPoint = 50; // Adjust as needed
+
+            if (elementTop < windowHeight - revealPoint) {
+                element.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // To check on initial load
+</script>
+
 </html>
